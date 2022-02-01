@@ -34,7 +34,8 @@ tabs.addEventListener('click', (Event) => {
 
 /*     console.log('поймали клик на:');
     console.dir(Event.target.parentNode); */
-    if(Event.target!=tabs) {
+    // if(Event.target!=tabs) {
+    if(Event.target.parentNode.classList.contains('tabs__item')) {
         if(!Event.target.parentNode.classList.contains('tabs__item_active')) {
 
             hideItems(tabs__items, catalog__content);
